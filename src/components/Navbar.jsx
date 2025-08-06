@@ -11,14 +11,15 @@ import {
   FaHandHoldingMedical,
   FaHeart,
   FaProcedures,
-  FaUserNurse, 
+  FaUserNurse,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../assets/sagrlogo1.png";
 
 const serviceItems = [
   { name: "Assisted Living Services", path: "/services/assisted-living", icon: <FaProcedures /> },
   { name: "Private Duty Services", path: "/services/private-duty", icon: <FaHandHoldingMedical /> },
-  { name: "Colostomy Bag Change", path: "/services/colostomy-bag", icon: <FaClinicMedical/> },
+  { name: "Colostomy Bag Change", path: "/services/colostomy-bag", icon: <FaClinicMedical /> },
   { name: "Personal Care Services", path: "/services/personal-care", icon: <FaHeart /> },
   { name: "Elderly Care Services", path: "/services/elderly-care", icon: <FaUserNurse /> },
   { name: "Babysitting Services", path: "/services/babysitting-service", icon: <FaBaby /> },
@@ -82,7 +83,7 @@ export default function Navbar() {
         {/* Logo Center */}
         <motion.div whileHover={{ scale: 1.05 }} className="cursor-pointer">
           <Link to="/">
-            <img src={""} alt="Sagar Logo" className="h-16 w-auto object-contain" />
+            <img src={logo} alt="Sagar Logo" className="h-20 w-auto object-contain" />
           </Link>
         </motion.div>
 
@@ -114,9 +115,15 @@ export default function Navbar() {
             transition={{ type: "tween", duration: 0.4 }}
             className="fixed top-0 right-0 w-[80%] h-full bg-[#FFFDF9] shadow-lg z-50 p-6 flex flex-col overflow-y-auto"
           >
+            {/* Header with Logo Left */}
             <div className="flex justify-between items-center mb-6">
-              <span className="text-2xl font-bold text-[#1C1C1C]">Menu</span>
-              <HiX className="text-3xl text-[#1C1C1C] cursor-pointer" onClick={() => setIsOpen(false)} />
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                <img src={logo} alt="Sagar Logo" className="h-14 w-auto" />
+              </Link>
+              <HiX
+                className="text-3xl text-[#1C1C1C] cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              />
             </div>
 
             {/* Links */}

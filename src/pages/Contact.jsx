@@ -31,8 +31,8 @@ export default function ContactHero() {
 
       {/* Glowing Gradient Rings */}
       <div className="absolute inset-0 z-0">
-        <div className="w-[500px] h-[500px] bg-gradient-to-br from-[#007bff] via-[#1A3A6D] to-[#000000] rounded-full blur-[180px] opacity-30 absolute -top-32 -left-40"></div>
-        <div className="w-[300px] h-[300px] bg-[#007bff] rounded-full blur-[150px] opacity-20 absolute bottom-10 right-0"></div>
+        <div className="w-[500px] h-[500px] bg-gradient-to-br from-[#0077B6] via-[#1A3A6D] to-[#000000] rounded-full blur-[180px] opacity-30 absolute -top-32 -left-40"></div>
+        <div className="w-[300px] h-[300px] bg-[#0077B6] rounded-full blur-[150px] opacity-20 absolute bottom-10 right-0"></div>
       </div>
 
       {/* Content */}
@@ -42,11 +42,11 @@ export default function ContactHero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <p className="inline-block px-4 py-1 text-sm uppercase tracking-wider bg-[#007bff] text-white rounded-full shadow-md">
+        <p className="inline-block px-4 py-1 text-sm uppercase tracking-wider bg-[#0077B6] text-white rounded-full shadow-md">
           Connect with Sagar Nursing Bureau
         </p>
 
-        <h1 className="text-4xl md:text-5xl font-bold tracking-wide leading-tight font-[Italiana] bg-gradient-to-r from-[#007bff] to-white bg-clip-text text-transparent drop-shadow-lg">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-wide leading-tight font-[Italiana] bg-gradient-to-r from-[#0077B6] to-white bg-clip-text text-transparent drop-shadow-lg">
           Compassionate Care, Professional Service
         </h1>
 
@@ -57,7 +57,7 @@ export default function ContactHero() {
         <div className="mt-8 flex flex-wrap justify-center gap-6">
           <button
             onClick={() => scrollToSection("contact-section")}
-            className="px-6 py-3 bg-[#007bff] text-white font-medium rounded-full shadow-md hover:bg-[#0056b3] transition cursor-pointer"
+            className="px-6 py-3 bg-[#0077B6] text-white font-medium rounded-full shadow-md hover:bg-[#0077B6] transition cursor-pointer"
           >
             Book Nursing Services
           </button>
@@ -81,7 +81,7 @@ export default function ContactHero() {
           transition={{ duration: 0.8 }}
           className="w-full lg:w-1/2 bg-white px-8 py-16 shadow-xl"
         >
-          <h2 className="text-4xl font-bold mb-4 pb-2 inline-block border-b-4 border-[#007bff]">
+          <h2 className="text-4xl font-bold mb-4 pb-2 inline-block border-b-4 border-[#0077B6]">
             Let’s Connect
           </h2>
           <p className="text-lg text-[#5E5E5E] mb-8">
@@ -113,7 +113,7 @@ export default function ContactHero() {
 
           <div className="mt-6 flex space-x-4 text-2xl text-[#4B4B4B]">
             {[FaLinkedinIn, FaInstagram, FaFacebookF, FaYoutube, FaMapMarkerAlt].map((Icon, i) => (
-              <Icon key={i} className="hover:text-[#007bff] transition-colors cursor-pointer" />
+              <Icon key={i} className="hover:text-[#0077B6] transition-colors cursor-pointer" />
             ))}
           </div>
         </motion.div>
@@ -138,7 +138,7 @@ export default function ContactHero() {
             method="POST"
             className="relative z-10 w-full max-w-lg px-8 py-12"
           >
-            <h3 className="text-2xl font-bold text-white mb-6 border-b-2 border-[#007bff] inline-block">
+            <h3 className="text-2xl font-bold text-white mb-6 border-b-2 border-[#0077B6] inline-block">
               Contact Form
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -180,7 +180,7 @@ export default function ContactHero() {
 
             <button
               type="submit"
-              className="w-full bg-[#007bff] text-white py-3 font-semibold rounded-full hover:bg-[#0056b3] transition duration-300"
+              className="w-full bg-[#0077B6] text-white py-3 font-semibold rounded-full hover:bg-[#0056b3] transition duration-300"
             >
               Send Message
             </button>

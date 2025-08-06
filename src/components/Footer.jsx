@@ -8,6 +8,8 @@ import {
 import { Link } from "react-router-dom";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
+import bg from "../assets/home/footer.jpg";
+import logo from "../assets/sagrlogo1.png";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -28,10 +30,15 @@ export default function Footer() {
       variants={containerVariants}
       initial="hidden"
       animate={controls}
-      className="relative text-gray-100 bg-[#0d1b2a] px-6 md:px-16 pt-20 pb-10 overflow-hidden font-[Poppins]"
+      className="relative text-gray-100 px-6 md:px-16 pt-20 pb-10 overflow-hidden font-[Poppins]"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/80 z-0" />
+      {/* Background Overlay */}
+      <div className="absolute inset-0  z-0" />
 
       {/* Glows */}
       <div className="absolute -top-20 left-[-100px] w-[300px] h-[300px] bg-blue-300 blur-[130px] opacity-10 rounded-full -z-10" />
@@ -40,19 +47,19 @@ export default function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12 text-sm relative z-10">
         {/* About Section */}
         <div className="flex flex-col space-y-5">
-          <img src={""} alt="Sagar Nursing Bureau Logo" className="w-32 mb-4" />
+          <img src={logo} alt="Sagar Nursing Bureau Logo" className="w-42 mb-4" />
           <h4 className="text-cyan-400 font-semibold text-2xl">About Us</h4>
-          <p className="leading-relaxed text-gray-300">
+          <p className="leading-relaxed text-gray-800">
             At Sagar Nursing Bureau, we provide reliable, compassionate, and expert home healthcare and hospital staff for your every need.
           </p>
 
           {/* Social Links */}
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-300 hover:text-cyan-400 transition"><FaLinkedinIn /></a>
-            <a href="#" className="text-gray-300 hover:text-cyan-400 transition"><FaInstagram /></a>
-            <a href="#" className="text-gray-300 hover:text-cyan-400 transition"><FaFacebookF /></a>
-            <a href="#" className="text-gray-300 hover:text-cyan-400 transition"><FaYoutube /></a>
-            <a href="#" className="text-gray-300 hover:text-cyan-400 transition"><FaTwitter /></a>
+            <a href="#" className="text-gray-800 hover:text-cyan-400 transition"><FaLinkedinIn /></a>
+            <a href="#" className="text-gray-800 hover:text-cyan-400 transition"><FaInstagram /></a>
+            <a href="#" className="text-gray-800 hover:text-cyan-400 transition"><FaFacebookF /></a>
+            <a href="#" className="text-gray-800 hover:text-cyan-400 transition"><FaYoutube /></a>
+            <a href="#" className="text-gray-800 hover:text-cyan-400 transition"><FaTwitter /></a>
           </div>
         </div>
 
@@ -68,7 +75,7 @@ export default function Footer() {
               ["Contact", "/contact"]
             ].map(([label, path], idx) => (
               <li key={idx}>
-                <Link to={path} className="hover:text-cyan-400 text-gray-300 transition">{label}</Link>
+                <Link to={path} className="hover:text-cyan-400 text-gray-800 transition">{label}</Link>
               </li>
             ))}
           </ul>
@@ -80,7 +87,7 @@ export default function Footer() {
               "Sagarnursingbureau@gmail.com"
             ].map((email, i) => (
               <li key={i}>
-                <a href={`mailto:${email}`} className="flex items-center space-x-2 hover:text-cyan-400 text-gray-300 transition">
+                <a href={`mailto:${email}`} className="flex items-center space-x-2 hover:text-cyan-400 text-gray-800 transition">
                   <FaEnvelope className="text-cyan-400" />
                   <span>{email}</span>
                 </a>
@@ -92,7 +99,7 @@ export default function Footer() {
         {/* Services */}
         <div>
           <h4 className="text-cyan-400 font-semibold mb-4 text-2xl">Our Services</h4>
-          <ul className="space-y-2 text-gray-300">
+          <ul className="space-y-2 text-gray-800">
             <li className="hover:text-cyan-400 cursor-pointer transition">Home Nursing Services</li>
             <li className="hover:text-cyan-400 cursor-pointer transition">Elderly Care</li>
             <li className="hover:text-cyan-400 cursor-pointer transition">Medical Attendants</li>
@@ -105,7 +112,7 @@ export default function Footer() {
         {/* Key Info */}
         <div>
           <h4 className="text-cyan-400 font-semibold mb-4 text-2xl">Key Personnel</h4>
-          <ul className="space-y-2 text-gray-300">
+          <ul className="space-y-2 text-gray-800">
             <li><strong>Owner:</strong> S. K. Sagar</li>
             <li><strong>Contact:</strong></li>
             <li className="flex items-center"><FaPhoneAlt className="text-cyan-400 mr-2" /> +91 8447176250</li>
@@ -116,7 +123,7 @@ export default function Footer() {
         {/* Address & Translator */}
         <div>
           <h4 className="text-cyan-400 font-semibold mb-4 text-2xl">Office Address</h4>
-          <address className="not-italic leading-relaxed text-gray-300">
+          <address className="not-italic leading-relaxed text-gray-800">
             <FaMapMarkerAlt className="inline-block text-cyan-400 mr-2" />
             Plot No. 13/746, Ground Floor,<br />
             Gali No. 13, Block L 1st,<br />
@@ -132,7 +139,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-10 text-center text-xs text-gray-400 border-t border-gray-700 pt-6 space-y-2 relative z-10">
+      <div className="mt-10 text-center text-xs text-gray-800 border-t border-gray-700 pt-6 space-y-2 relative z-10">
         <VisitorCounter />
         <p>© {new Date().getFullYear()} Sagar Nursing Bureau. All rights reserved.</p>
         <p>

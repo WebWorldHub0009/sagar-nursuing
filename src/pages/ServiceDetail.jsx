@@ -8,7 +8,7 @@ import {
   FaUserNurse,
   FaBaby,
 } from "react-icons/fa";
-import services from "./service.json";
+import services from "./service.js";
 import ServiceSlider from "../components/ServiceSlider";
 
 const iconMap = {
@@ -26,7 +26,7 @@ export default function ServiceDetail() {
 
   if (!service) {
     return (
-      <div className="text-center py-20">
+      <div className="text-center py-10">
         <h2 className="text-2xl font-bold text-red-600">Service Not Found</h2>
         <Link
           to="/services"
@@ -61,8 +61,8 @@ export default function ServiceDetail() {
         </div>
 
         {/* Right - Service Content */}
-        <div className="p-2">
-          <h1 className="text-4xl font-bold font-[popins] text-[#90BE6D] mb-6 leading-snug">
+        <div className="p-2 ">
+          <h1 className="text-4xl mt-2 font-bold font-[popins] text-[#90BE6D]  leading-snug">
             {service.name}
           </h1>
 
