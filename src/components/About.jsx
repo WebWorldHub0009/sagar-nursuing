@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import Tilt from "react-parallax-tilt";
 import { Link } from "react-router-dom";
 
-import nurseImage from "../assets/home/nurse2.jpg";
+import nurseImage from "../assets/docd.avif";
 import nurseImage2 from "../assets/home/nurse3.jpg"; // <- Your second image
 
 const About = () => {
